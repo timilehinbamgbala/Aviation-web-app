@@ -1,0 +1,646 @@
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding: 32px 48px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 0.55;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid #d0d0d0;
+  background: #f5f5f5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.nav-btn:hover {
+  border-color: #999;
+  background: #ebebeb;
+}
+
+.nav-btn svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero {
+  height: 200vh;
+  position: relative;
+}
+
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hero-title {
+  position: absolute;
+  top: -110px;
+  left: 70px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(108px, 19vw, 202px);
+  font-weight: 800;
+  color: #111;
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: 0.04em;
+  z-index: 2;
+}
+
+.hero-tagline {
+  position: absolute;
+  top: 116px;
+  right: 390px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(22px, 2.4vw, 40px);
+  font-weight: 700;
+  color: #111;
+  line-height: 1.25;
+  text-align: right;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.plane-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80vw;
+  max-width: 1080px;
+  transform-origin: bottom center;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.plane-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 36px;
+  right: 48px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.scroll-indicator svg {
+  width: 14px;
+  height: 14px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.section-two {
+  background: #fff;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 120px 0 60px 0;
+  border-top: 1px solid #e8e8e8;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.s2-plane {
+  position: relative;
+  width: 98vw;
+  max-width: 1800px;
+  margin-left: -5vw;
+}
+
+.s2-plane img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.s2-text {
+  position: absolute;
+  top: 210px;
+  right: 20%;
+  width: 420px;
+  text-align: left;
+  z-index: 5;
+}
+
+.s2-headline {
+  font-family: "inter", sans-serif;
+  font-size: clamp(43px, 2vw, 45px);
+  font-weight: 400;
+  line-height: 1.5;
+  color: #111;
+  width: 100%;
+  text-align: left;
+}
+
+.s2-arrows {
+  position: absolute;
+  bottom: 40px;
+  right: 6%;
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.s2-arrow-btn {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.s2-arrow-btn:hover {
+  opacity: 0.7;
+}
+
+.section-three {
+  display: flex;
+  height: 100vh;
+  border-top: 1px solid #e8e8e8;
+  overflow: hidden;
+}
+
+.s3-left {
+  width: 26%;
+  background: #151623;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 64px 48px;
+  box-sizing: border-box;
+}
+
+.s3-heading {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(34px, 3vw, 44px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.s3-subtext {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #d8dae0;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.s3-cta {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  background: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 14px 26px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.s3-cta:hover {
+  opacity: 0.85;
+}
+
+.s3-imagewrap {
+  width: 74%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.s3-full-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+.s3-right-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 100%;
+  background: #bc7155;
+  z-index: 2;
+  transition: transform 0.5s ease;
+}
+
+.s3-imagewrap:hover .s3-right-overlay {
+  transform: translateX(100%);
+}
+
+.s3-nav-btns {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.inline-arrow-btn {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.inline-arrow-btn:hover {
+  opacity: 0.7;
+}
+
+.section-four {
+  background: #fff;
+  min-height: 100vh;
+  padding: 90px 64px 48px;
+  box-sizing: border-box;
+  border-top: 1px solid #e8e8e8;
+}
+
+.s4-heading {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(32px, 3.4vw, 48px);
+  font-weight: 800;
+  color: #111;
+  letter-spacing: -0.02em;
+  margin-bottom: 36px;
+}
+
+.s4-imagewrap {
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+  border-radius: 48px 4px 48px 4px;
+  position: relative;
+}
+
+.s4-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.s4-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.s4-tabs {
+  display: flex;
+  gap: 12px;
+}
+
+.s4-tab {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: #b8b8b8;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.s4-tab:hover {
+  background: #999;
+}
+
+.s4-tab.active {
+  background: #111;
+}
+
+.s4-nav-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.section-five {
+  display: flex;
+  height: 100vh;
+  border-top: 1px solid #e8e8e8;
+  overflow: hidden;
+}
+
+.s5-imagewrap {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.s5-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.s5-content {
+  width: 50%;
+  background: #151623;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 100px 72px;
+  box-sizing: border-box;
+}
+
+.s5-heading {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+
+.s5-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #c9cbd2;
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+.s5-nav-btns {
+  position: absolute;
+  bottom: 40px;
+  right: 48px;
+  display: flex;
+  gap: 10px;
+}
+
+.section-six {
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-top: 1px solid #e8e8e8;
+  padding: 60px 48px;
+  box-sizing: border-box;
+  gap: 4px;
+}
+
+.s6-eyebrow {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #999;
+}
+
+.s6-hover-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.s6-title-row {
+  position: relative;
+  line-height: 1;
+}
+
+.s6-title {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 800;
+  color: #111;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0;
+}
+
+.s6-plane-track {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 30px;
+}
+
+.s6-plane {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: auto;
+  transform: translateY(-50%);
+  transition: opacity 0.8s ease-in-out;
+}
+
+.s6-plane-start {
+  width: 32px;
+  opacity: 1;
+}
+
+.s6-plane-end {
+  width: 100%;
+  opacity: 0;
+}
+
+.s6-hover-zone:hover .s6-plane-start {
+  opacity: 0;
+}
+
+.s6-hover-zone:hover .s6-plane-end {
+  opacity: 1;
+}
+
+.s6-nav-btns {
+  position: absolute;
+  bottom: 40px;
+  right: 48px;
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 20px 24px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-title {
+    top: 32px;
+    left: 24px;
+  }
+
+  .hero-tagline {
+    top: 80px;
+    right: 24px;
+    font-size: 18px;
+  }
+
+  .plane-wrap {
+    width: 96vw;
+  }
+
+  .section-two {
+    flex-direction: column;
+    padding: 60px 24px;
+    gap: 40px;
+  }
+
+  .s2-plane {
+    flex: unset;
+    max-width: 100%;
+  }
+
+  .section-three {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .s3-left,
+  .s3-imagewrap {
+    width: 100%;
+  }
+
+  .s3-imagewrap {
+    height: 320px;
+  }
+
+  .s3-right-overlay {
+    width: 45%;
+  }
+
+  .section-four {
+    padding: 60px 24px 40px;
+  }
+
+  .s4-imagewrap {
+    height: 320px;
+    border-radius: 28px 4px 28px 4px;
+  }
+
+  .s4-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .s4-tabs {
+    flex-wrap: wrap;
+  }
+
+  .section-five {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .s5-imagewrap,
+  .s5-content {
+    width: 100%;
+  }
+
+  .s5-imagewrap {
+    height: 320px;
+  }
+
+  .s5-content {
+    padding: 48px 24px;
+  }
+
+  .section-six {
+    padding: 48px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plane-wrap {
+    will-change: auto;
+  }
+}
